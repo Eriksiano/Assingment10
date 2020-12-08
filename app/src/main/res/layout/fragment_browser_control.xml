@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/browser_control_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BrowserControlFragment">
+
+
+    <ImageButton
+        android:id="@+id/newpage"
+        app:layout_constraintBottom_toTopOf="@id/browser_control_bookmark_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="200dp"
+        android:contentDescription="@string/todo"
+        android:src="@android:drawable/ic_media_play"
+        />
+
+    <!-- Two Additional ImageButtons in a LinearLayout -->
+
+    <LinearLayout
+        android:id="@+id/browser_control_bookmark_buttons_container"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/browser_control_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:weightSum="50"
+        >
+        <ImageButton
+            android:id="@+id/browser_control_button_save_bookmark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:src="@drawable/ic_save"
+            android:layout_weight="25"
+            />
+        <ImageButton
+            android:id="@+id/browser_control_button_display_bookmarks"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:src="@drawable/ic_bookmarks"
+            android:layout_weight="25"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

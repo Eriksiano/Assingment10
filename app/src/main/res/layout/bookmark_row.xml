@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bookmark_row_root"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/line_height">
+
+    <TextView
+        android:id="@+id/bookmark_textview_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Bookmark"
+        android:textAppearance="@style/BreadText"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        />
+
+    <ImageButton
+        android:id="@+id/bookmark_button_delete"
+        android:layout_width="@dimen/line_height"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintRight_toRightOf="@id/bookmark_row_root"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
